@@ -22,7 +22,7 @@ public class FloorManager : MonoBehaviour
     bool isPinkBottom = true;
 
     public bool createPoint;
-    public float position = 0f;
+    public float position = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +34,7 @@ public class FloorManager : MonoBehaviour
     void Update()
     {
         //playerのx座標を取得してそこから17右にオブジェクトを生成
-        if (player.transform.position.x >= position)
+        if (player.transform.position.x > position)
         {
             //確率を取得
             changeHeightTop = RandomNumber(numberTop);
@@ -58,18 +58,18 @@ public class FloorManager : MonoBehaviour
                 if(isPinkTop == true){
                     if(createPoint) 
                     {
-                        Instantiate(pointCube, new Vector3(position + 16, heightTop - 5.5f, 0), transform.rotation);
+                        Instantiate(pointCube, new Vector3(position + 15, heightTop - 5.5f, 0), transform.rotation);
                     }
-                    Instantiate(floor1, new Vector3(position + 16, heightTop, 0), transform.rotation, parentTop.transform);
+                    Instantiate(floor1, new Vector3(position + 15, heightTop, 0), transform.rotation, parentTop.transform);
                     isPinkTop = false;
                 } 
                 else if (isPinkTop == false)
                 {
                     if(createPoint) 
                     {
-                        Instantiate(pointCube, new Vector3(position + 16, heightTop - 5.5f, 0), transform.rotation);
+                        Instantiate(pointCube, new Vector3(position + 15, heightTop - 5.5f, 0), transform.rotation);
                     }
-                    Instantiate(floor2, new Vector3(position + 16, heightTop, 0), transform.rotation, parentTop.transform);
+                    Instantiate(floor2, new Vector3(position + 15, heightTop, 0), transform.rotation, parentTop.transform);
                     isPinkTop = true;
                 }
                 
@@ -80,18 +80,18 @@ public class FloorManager : MonoBehaviour
                 if(isPinkTop == true){
                     if(createPoint) 
                     {
-                        Instantiate(pointCube, new Vector3(position + 16, heightTop - 5.5f, 0), transform.rotation);
+                        Instantiate(pointCube, new Vector3(position + 15, heightTop - 5.5f, 0), transform.rotation);
                     }
-                    Instantiate(floor1, new Vector3(position + 16, heightTop, 0), transform.rotation, parentBottom.transform);
+                    Instantiate(floor1, new Vector3(position + 15, heightTop, 0), transform.rotation, parentBottom.transform);
                     isPinkTop = false;
                 } 
                 else if (isPinkTop == false)
                 {
                     if(createPoint) 
                     {
-                        Instantiate(pointCube, new Vector3(position + 16, heightTop - 5.5f, 0), transform.rotation);
+                        Instantiate(pointCube, new Vector3(position + 15, heightTop - 5.5f, 0), transform.rotation);
                     }
-                    Instantiate(floor2, new Vector3(position + 16, heightTop, 0), transform.rotation, parentBottom.transform);
+                    Instantiate(floor2, new Vector3(position + 15, heightTop, 0), transform.rotation, parentBottom.transform);
                     isPinkTop = true;
                 }
             }
@@ -118,18 +118,18 @@ public class FloorManager : MonoBehaviour
                 if(isPinkBottom == true){
                     if(createPoint) 
                     {
-                        Instantiate(pointCube, new Vector3(position + 16, heightBottom + 5.5f, 0), transform.rotation);
+                        Instantiate(pointCube, new Vector3(position + 15, heightBottom + 5.5f, 0), transform.rotation);
                     }
-                    Instantiate(floor1, new Vector3(position + 16, heightBottom, 0), transform.rotation);
+                    Instantiate(floor1, new Vector3(position + 15, heightBottom, 0), transform.rotation);
                     isPinkBottom = false;
                 } 
                 else if (isPinkBottom == false)
                 {
                     if(createPoint) 
                     {
-                        Instantiate(pointCube, new Vector3(position + 16, heightBottom + 5.5f, 0), transform.rotation);
+                        Instantiate(pointCube, new Vector3(position + 15, heightBottom + 5.5f, 0), transform.rotation);
                     }
-                    Instantiate(floor2, new Vector3(position + 16, heightBottom, 0), transform.rotation);
+                    Instantiate(floor2, new Vector3(position + 15, heightBottom, 0), transform.rotation);
                     isPinkBottom = true;
                 }
             } 
@@ -138,18 +138,18 @@ public class FloorManager : MonoBehaviour
                 if(isPinkBottom == true){
                     if(createPoint) 
                     {
-                        Instantiate(pointCube, new Vector3(position + 16, heightBottom + 5.5f, 0), transform.rotation);
+                        Instantiate(pointCube, new Vector3(position + 15, heightBottom + 5.5f, 0), transform.rotation);
                     }
-                    Instantiate(floor1, new Vector3(position + 16, heightBottom, 0), transform.rotation);
+                    Instantiate(floor1, new Vector3(position + 15, heightBottom, 0), transform.rotation);
                     isPinkBottom = false;
                 } 
                 else if (isPinkBottom == false)
                 {
                     if(createPoint) 
                     {
-                        Instantiate(pointCube, new Vector3(position + 16, heightBottom + 5.5f, 0), transform.rotation);
+                        Instantiate(pointCube, new Vector3(position + 15, heightBottom + 5.5f, 0), transform.rotation);
                     }
-                    Instantiate(floor2, new Vector3(position + 16, heightBottom, 0), transform.rotation);
+                    Instantiate(floor2, new Vector3(position + 15, heightBottom, 0), transform.rotation);
                     isPinkBottom = true;
                 }
             }
@@ -161,11 +161,11 @@ public class FloorManager : MonoBehaviour
     {
         bool value = true;
         num = Random.Range(0, 100);
-        if (num < 35)
+        if (num < 23)
         {
             value = true;
         }
-        else if (num >= 35)
+        else if (num >= 23)
         {
             value = false;
         }

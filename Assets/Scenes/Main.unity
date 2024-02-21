@@ -164,7 +164,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87453937}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 138b2c234ab144a70bd6b3ecbbf4e33a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -270,7 +270,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113590330}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 138b2c234ab144a70bd6b3ecbbf4e33a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1447,7 +1447,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395407953}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 138b2c234ab144a70bd6b3ecbbf4e33a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -7066,7 +7066,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744354587}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 138b2c234ab144a70bd6b3ecbbf4e33a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -7266,7 +7266,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 809639739}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 138b2c234ab144a70bd6b3ecbbf4e33a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -9770,7 +9770,7 @@ Transform:
   m_GameObject: {fileID: 1549031440}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0738554, y: -0.22652364, z: -0.42817783}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9827,7 +9827,7 @@ MonoBehaviour:
   parentTop: {fileID: 842891991}
   parentBottom: {fileID: 1487177738}
   createPoint: 0
-  position: 0
+  position: 1
 --- !u!1 &1595437529
 GameObject:
   m_ObjectHideFlags: 0
@@ -15626,8 +15626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d01353cdf22e44ea8bbe0ae512f7ef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fakeGravity: -24
   score: 0
+  highScore: 0
   isPlaying: 0
   mainCamera: {fileID: 659283439}
   particle: {fileID: 1848935759}

@@ -9,7 +9,6 @@ using UnityEngine.UI;
 public class PlayerMove : MonoBehaviour
 {
     float speed = 12.0f;
-    public float fakeGravity = -8.0f;
     public int score = 0;
     public int highScore;
     bool isGravity = true;
@@ -45,15 +44,17 @@ public class PlayerMove : MonoBehaviour
                 isPlaying = true;
                 particle.Play();
                 rb.useGravity = true;
-                Physics.gravity = new Vector3(0, -120f, 0);
+                Physics.gravity = new Vector3(0, -80, 0);
             }
-        } 
+        }
         else if (isPlaying == true)
         {
             scoreText.text = score.ToString();
 
             // プレイヤーとカメラとパーティクルの移動
             transform.position += new Vector3(speed, 0, 0) * Time.deltaTime;
+            Debug.Log("aaa");
+            //rb.velocity = Vector3.ClampMagnitude(rb.velocity, 14);
 
             mainCamera.transform.position = new Vector3(transform.position.x, 0, -10);
             // - Destroyの後も残っていて欲しいのでparticle系はscriptで移動させる。
@@ -65,12 +66,14 @@ public class PlayerMove : MonoBehaviour
             {
                 if (isGravity == true)
                 {
-                    Physics.gravity = new Vector3(0, 120f, 0);
+                    rb.velocity = new Vector3(0, 0, 0);
+                    Physics.gravity = new Vector3(0, 80, 0);
                     isGravity = false;
                 }
                 else if (isGravity == false)
                 {
-                    Physics.gravity = new Vector3(0, -120f, 0);
+                    rb.velocity = new Vector3(0, 0, 0);
+                    Physics.gravity = new Vector3(0, -80, 0);
                     isGravity = true;
                 }
             }
